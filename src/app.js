@@ -7,4 +7,14 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static("public"))
 app.use(cookiparser())
+
+
+// routes import
+import userRouter from "./routes/user.router.js"
+
+// route declaration 
+app.use("/api/v2/users", userRouter)
+
+
+
 export {app};
